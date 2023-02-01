@@ -1,13 +1,12 @@
 import React from 'react';
 import st from './SideBarL.module.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {Container} from "./common/Container";
-import { faList,faMessage } from '@fortawesome/free-solid-svg-icons'
+import {faList, faMessage} from '@fortawesome/free-solid-svg-icons'
 
 export const SideBarL = () => {
     return (
         <aside className={st.sideBarL}>
-            <Container style={st.sideBarL__container}>
+            <div className={st.sideBarL__container}>
                 <nav className={st.sideBarL__menu}>
                     <ul className={st.menu__list}>
                         <li className={`${st.menu__item} ${st.active}`}>
@@ -20,7 +19,7 @@ export const SideBarL = () => {
                         </li>
                     </ul>
                 </nav>
-            </Container>
+            </div>
         </aside>
     );
 };
