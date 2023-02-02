@@ -17,9 +17,12 @@
 }
 .main__content {
     max-width: 1045px;
-    padding: 23px 0 24px 0;
+    padding: 23px 0 0 0;
+}
+.main__content__head {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 24px;
 }
 .main__search {
     padding: 2px 2px 2px 10px;
@@ -36,6 +39,11 @@
     border: 1px solid #DEDBDC;
     border-radius: 5px;
     background-color: inherit;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px
 }
 .content__head {
 
