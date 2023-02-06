@@ -1,11 +1,12 @@
 import React from 'react';
-import st from './Content.module.css'
+import st from './BlogDescrption.module.css'
+import img from "../../img/blogs/Vector.png";
 
-export const Content = () => {
+export const BlogDescrption = () => {
     return (
         <div className={st.content__container}>
             <div className={st.content__image}>
-                <img />
+                <img src={img}/>
             </div>
             <div className={st.content__body}>
                 <div className={st.content__title}>

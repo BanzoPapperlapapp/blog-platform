@@ -1,0 +1,13 @@
+.post__container {
+    display: flex;
+    flex: 0 0 300px;
+    flex-direction: column;
+    margin: 5px;
+}
+.post__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    min-height: 180px;
+}

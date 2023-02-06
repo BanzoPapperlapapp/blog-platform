@@ -7,13 +7,15 @@
 
 }
 .content__image {
-    min-height: 156px;
-    min-width: 156px;
     padding: 65px;
     border: 1px solid #DEDBDC;
     border-radius: 50%;
     background: #FCFBFB;
     margin-right: 12px;
+    text-align: center;
+}
+.content__image img {
+    background: url("/src/img/blogs/Vector.png");
 }
 @media (max-width: 900px) {
     .content__image{

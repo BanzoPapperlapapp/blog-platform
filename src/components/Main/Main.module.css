@@ -1,0 +1,22 @@
+.main__container {
+    margin-left: 24px;
+    width: 100%;
+    padding-bottom: 10px;
+}
+.main__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 29px 0 7px 0;
+}
+.main__border {
+    height: 1px;
+    left: 320px;
+    top: 120px;
+    background: #DEDBDC;
+}
+.main__content {
+    max-width: 1045px;
+    padding: 23px 0 0 0;
+}

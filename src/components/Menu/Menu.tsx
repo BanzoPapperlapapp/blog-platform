@@ -9,11 +9,11 @@ export const Menu = () => {
             <ul className={st.menu__list}>
                 <li className={`${st.menu__item} ${st.active}`}>
                     <FontAwesomeIcon icon={faList} color={"#F8346B"}/>
-                    <a href="#" className={st.menu__link}> Blogs</a>
+                    <a href="src/components/Menu/Menu#" className={st.menu__link}> Blogs</a>
                 </li>
                 <li className={st.menu__item}>
                     <FontAwesomeIcon icon={faMessage} color={"black"}/>
-                    <a href="#" className={st.menu__link}>Posts</a>
+                    <a href="src/components/Menu/Menu#" className={st.menu__link}>Posts</a>
                 </li>
             </ul>
         </nav>

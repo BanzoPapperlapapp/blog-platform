@@ -2,7 +2,7 @@ import React from 'react';
 import st from './SideBarL.module.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faList, faMessage} from '@fortawesome/free-solid-svg-icons'
-import {Menu} from "./menu/Menu";
+import {Menu} from "../Menu/Menu";
 
 export const SideBarL = () => {
     return (

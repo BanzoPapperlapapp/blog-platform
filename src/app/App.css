@@ -41,16 +41,11 @@ body{
     line-height: 24px;
     background: #FAF7F8;
 }
-
-.wrapper {
+.App {
     min-height: 100%;
     overflow: hidden;
 }
-
-.header__container {
-
+.wrapper {
+    display: flex;
 }
 
-.App {
-    position: relative;
-}
