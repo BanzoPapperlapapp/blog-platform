@@ -6,19 +6,18 @@ import {BlogPost} from "../../components/Blog/BlogPost";
 import {useParams} from "react-router-dom";
 import axios from 'axios';
 const settings = {
-    withCredentials: true,
     headers: {
-        'API-KEY': '4d930de1-8cb2-436a-8a88-6a8f5582290e'
+        'Content-Type': 'application/json'
     }
 }
 const instance = axios.create({
-    baseURL: 'https://api-swagger.it-incubator.ru/ht_02/api/',
+    baseURL: 'https://bloggers-chi.vercel.app/',
     ...settings
 })
 export const Blog = () => {
     const {id} = useParams()
     useEffect(()=>{
-        instance.get('blogs/1')
+        instance.get('blogs/63d6e5c77dd50ba749a53d4f')
             .then((res)=>{console.log(res)})
     },[id])
     return (
