@@ -1,6 +1,6 @@
 import React from 'react';
 import st from './Blogs.module.css'
-import {BlogDescrption} from "../../components/Blog/BlogDescrption";
+import {BlogDescription} from "../../components/Blog/BlogDescription";
 
 export const Blogs = () => {
     return (
@@ -16,9 +16,9 @@ export const Blogs = () => {
                 </select>
             </div>
             <div className={st.main__content__body}>
-                <BlogDescrption/>
-                <BlogDescrption/>
-                <BlogDescrption/>
+                <BlogDescription/>
+                <BlogDescription/>
+                <BlogDescription/>
             </div>
             <div className={st.main__content__footer}>
                 <a href={"#"} >Show more</a>

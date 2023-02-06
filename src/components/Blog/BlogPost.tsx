@@ -8,8 +8,9 @@ export const BlogPost = () => {
                     <img src={img} alt={'Blog image'}/>
             </div>
             <div className={st.post__body}>
-                <h4>Let's fly into space</h4>
-                <span>Lorem ipsum dolor sit amet, consectet adipiscing elit...</span>
+                <h4 className={st.post__title}>Let's fly into space</h4>
+                <div className={st.post__preview}>Lorem ipsum dolor sit amet, consectet adipiscing elit...</div>
+                <div className={st.post__date}>12.12.2022</div>
             </div>
         </div>
     );

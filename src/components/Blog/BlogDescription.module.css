@@ -7,15 +7,18 @@
 
 }
 .content__image {
+    height: 160px;
     padding: 65px;
     border: 1px solid #DEDBDC;
     border-radius: 50%;
     background: #FCFBFB;
     margin-right: 12px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .content__image img {
-    background: url("/src/img/blogs/Vector.png");
+    background: url("/src/img/blogs/Vector.png") center;
 }
 @media (max-width: 900px) {
     .content__image{
@@ -36,10 +39,19 @@
 .blog__subtitle {
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 181%;
+    font-size: 14px;
+    line-height: 115%;
     color: #737067;
-    margin-bottom: 24px;
+    margin: 32px 0 39px 0;
+}
+.subtitle__text {
+
+}
+.subtitle__date {
+    color: black;
+}
+.subtitle__website {
+
 }
 .blog__text {
     font-style: normal;
