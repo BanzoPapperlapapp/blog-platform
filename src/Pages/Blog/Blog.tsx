@@ -4,21 +4,16 @@ import img from '../../img/blogs/Vector.png'
 import {BlogDescription} from "../../components/Blog/BlogDescription";
 import {BlogPost} from "../../components/Blog/BlogPost";
 import {useParams} from "react-router-dom";
-import axios from 'axios';
-const settings = {
-    headers: {
-        'Content-Type': 'application/json'
-    }
-}
-const instance = axios.create({
-    baseURL: 'https://bloggers-chi.vercel.app/',
-    ...settings
-})
+import {useAppDispatch, useAppSelector} from "../../app/Store";
+import {setBlogFC} from "../../store/BlogReducer";
+
+
 export const Blog = () => {
     const {id} = useParams()
-    useEffect(()=>{
-        instance.get('blogs/63d6e5c77dd50ba749a53d4f')
-            .then((res)=>{console.log(res)})
+    const dispatch = useAppDispatch()
+    const blog = useAppSelector(state => state.blog)
+    useEffect(()=> {
+        id && dispatch(setBlogFC(id))
     },[id])
     return (
         <>
@@ -29,7 +24,7 @@ export const Blog = () => {
                 <img src={img} alt={"Blogs image"}/>
             </div>
             <div className={st.main__content__body}>
-                <BlogDescription/>
+                <BlogDescription blog={blog}/>
                 <div className={st.blog__posts__container}>
                     <BlogPost/>
                     <BlogPost/>

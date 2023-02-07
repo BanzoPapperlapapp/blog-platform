@@ -1,8 +1,10 @@
 import React from 'react';
 import st from './Blogs.module.css'
 import {BlogDescription} from "../../components/Blog/BlogDescription";
+import {useAppSelector} from "../../app/Store";
 
 export const Blogs = () => {
+    const blogs = useAppSelector(state => state.blogs)
     return (
         <>
             <div className={st.main__content__head}>
@@ -16,9 +18,7 @@ export const Blogs = () => {
                 </select>
             </div>
             <div className={st.main__content__body}>
-                <BlogDescription/>
-                <BlogDescription/>
-                <BlogDescription/>
+                {blogs?.map( blog => <BlogDescription key={blog.id} blog={blog}/>)}
             </div>
             <div className={st.main__content__footer}>
                 <a href={"#"} >Show more</a>
