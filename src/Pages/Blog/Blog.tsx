@@ -5,19 +5,18 @@ import {BlogDescription} from "../../components/Blog/BlogDescription";
 import {BlogPost} from "../../components/Blog/BlogPost";
 import {Link, To, useLocation, useNavigate, useParams} from "react-router-dom";
 import {useAppDispatch, useAppSelector} from "../../app/Store";
-import {setBlogFC} from "../../store/BlogReducer";
+import {setBlogAC, setBlogFC} from "../../store/BlogReducer";
 import {BlogsApiType} from "../../api/BlogsPlatformApi";
 
 
 export const Blog = () => {
-    const {id} = useParams()
     const dispatch = useAppDispatch()
-    // const blog = useAppSelector(state => state.blog)
-    const blog:BlogsApiType = useLocation().state
-    const navigate = useNavigate()
-    // useEffect(()=> {
-    //     id && dispatch(setBlogFC(id))
-    // },[id])
+    const blog = useAppSelector(state => state.blog)
+    const blogTemp:BlogsApiType = useLocation().state
+
+    useEffect(()=> {
+        dispatch(setBlogAC(blogTemp))
+    },[blogTemp.id])
 
     return (
         <>
