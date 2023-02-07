@@ -3,22 +3,26 @@ import st from './Blog.module.css'
 import img from '../../img/blogs/Vector.png'
 import {BlogDescription} from "../../components/Blog/BlogDescription";
 import {BlogPost} from "../../components/Blog/BlogPost";
-import {useParams} from "react-router-dom";
+import {Link, To, useLocation, useNavigate, useParams} from "react-router-dom";
 import {useAppDispatch, useAppSelector} from "../../app/Store";
 import {setBlogFC} from "../../store/BlogReducer";
+import {BlogsApiType} from "../../api/BlogsPlatformApi";
 
 
 export const Blog = () => {
     const {id} = useParams()
     const dispatch = useAppDispatch()
-    const blog = useAppSelector(state => state.blog)
-    useEffect(()=> {
-        id && dispatch(setBlogFC(id))
-    },[id])
+    // const blog = useAppSelector(state => state.blog)
+    const blog:BlogsApiType = useLocation().state
+    const navigate = useNavigate()
+    // useEffect(()=> {
+    //     id && dispatch(setBlogFC(id))
+    // },[id])
+
     return (
         <>
             <div className={st.main__content__roadmap}>
-                <a href={"#"}>Back to blogs</a>
+                <Link to={-1 as To}>Back to blogs</Link>
             </div>
             <div className={st.main__content__head}>
                 <img src={img} alt={"Blogs image"}/>
