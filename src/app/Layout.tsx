@@ -5,6 +5,7 @@ import {SideBarL} from "../components/SideBar/SideBarL";
 import {Main} from "../components/Main/Main";
 import {Outlet} from "react-router-dom";
 import st from './Layout.module.css'
+import {Footer} from "../components/Footer/Footer";
 
 export const Layout = () => {
     return (
@@ -16,6 +17,7 @@ export const Layout = () => {
                     <Outlet/>
                 </Main>
             </MainContainer>
+            <Footer/>
         </div>
     );
 };

@@ -1,5 +1,6 @@
 import {api, BlogsApiType, BlogsResponseType} from "../api/BlogsPlatformApi";
 import {Dispatch} from "redux";
+import {setAppStatusAC} from "./AppReducer";
 
 const initialState : BlogsApiType[] = [
     {
@@ -25,8 +26,10 @@ export const getBlogsAC = (state: BlogsApiType[]) => {
 
 export const getBlogTC = () => {
     return async (dispatch: Dispatch) => {
+        dispatch(setAppStatusAC('loading'))
         const blogs = await api.getBlogs()
         dispatch(getBlogsAC(blogs.data.items))
+        dispatch(setAppStatusAC('idle'))
     }
 }
 

@@ -1,7 +1,7 @@
 .app {
-    min-height: 100%;
     overflow: hidden;
 }
 .wrapper {
     display: flex;
+    min-height: 100%;
 }

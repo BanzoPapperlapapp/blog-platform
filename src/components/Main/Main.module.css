@@ -1,6 +1,10 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
 .main__container {
     margin-left: 24px;
-    width: 100%;
     padding-bottom: 10px;
 }
 .main__title {

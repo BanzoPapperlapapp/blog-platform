@@ -7,11 +7,13 @@ type MainPropsType = {
 }
 export const Main = ({children}: MainPropsType) => {
     return (
-        <main className={st.main__container}>
-            <h3 className={st.main__title}>Blogs</h3>
-            <div className={st.main__border}></div>
-            <div className={st.main__content}>
-                {children}
+        <main className={st.main}>
+            <div className={st.main__container}>
+                <h3 className={st.main__title}>Blogs</h3>
+                <div className={st.main__border}></div>
+                <div className={st.main__content}>
+                    {children}
+                </div>
             </div>
         </main>
 
