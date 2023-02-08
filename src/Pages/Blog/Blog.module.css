@@ -65,3 +65,14 @@
     flex-wrap: wrap;
     margin-top: 48px;
 }
+.main__content__roadmap::before {
+    width: 16px;
+    content: "";
+    float: left;
+    height: 16px;
+    margin-right: 5px;
+    background: url('../../img/common/UI/back_arrow.png') no-repeat bottom;
+    background-size: 80%;
+
+
+}

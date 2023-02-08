@@ -1,12 +1,13 @@
 import React, {useEffect} from 'react';
 import st from './Blog.module.css'
-import img from '../../img/blogs/Vector.png'
+import img from '../../img/blogs/Vector.png';
 import {BlogDescription} from "../../components/Blog/BlogDescription";
 import {BlogPost} from "../../components/Blog/BlogPost";
 import {Link, To, useLocation, useNavigate, useParams} from "react-router-dom";
 import {useAppDispatch, useAppSelector} from "../../app/Store";
 import {setBlogAC, setBlogFC} from "../../store/BlogReducer";
 import {BlogsApiType} from "../../api/BlogsPlatformApi";
+
 
 
 export const Blog = () => {

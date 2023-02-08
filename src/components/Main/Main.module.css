@@ -13,7 +13,21 @@
     font-size: 20px;
     line-height: 24px;
     padding: 29px 0 7px 0;
+    display: flex;
+    justify-content: flex-start;
 }
+.main__subtitle {
+    display: flex;
+}
+.main__subtitle::before {
+    width: 16px;
+    content: "";
+    margin-left: 5px;
+    background: url('../../img/common/UI/arrow_right.png') no-repeat 50% 60%;
+    background-size: 100%;
+}
+
+
 .main__border {
     height: 1px;
     left: 320px;

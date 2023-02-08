@@ -6,6 +6,7 @@ import {Blog} from "../Pages/Blog/Blog";
 import {Layout} from "./Layout";
 import {useAppDispatch, useAppSelector} from "./Store";
 import {getBlogTC} from "../store/BlogsReducer";
+import {Posts} from "../Pages/Posts/Posts";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path={"/"} element={<Layout/>}>
                 <Route index element={<Blogs/>}/>
                 <Route path={"blogs/:id"} element={<Blog/>}/>
+                <Route path={"posts"} element={<Posts/>}/>
             </Route>
         </Routes>
     );
