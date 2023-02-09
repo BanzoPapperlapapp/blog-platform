@@ -2,11 +2,11 @@ import React, {useEffect} from 'react';
 import st from './Blog.module.css'
 import img from '../../img/blogs/Vector.png';
 import {BlogDescription} from "../../components/Blog/BlogDescription";
-import {BlogPost} from "../../components/Blog/BlogPost";
-import {Link, To, useLocation, useNavigate, useParams} from "react-router-dom";
+import {Link, To, useLocation} from "react-router-dom";
 import {useAppDispatch, useAppSelector} from "../../app/Store";
-import {setBlogAC, setBlogFC} from "../../store/BlogReducer";
+import {setBlogAC} from "../../store/BlogReducer";
 import {BlogsApiType} from "../../api/BlogsPlatformApi";
+import {Posts} from "../Posts/Posts";
 
 
 
@@ -20,7 +20,7 @@ export const Blog = () => {
     },[blogTemp.id])
 
     return (
-        <>
+        <div className={st.blog__container}>
             <div className={st.main__content__roadmap}>
                 <Link to={-1 as To}>Back to blogs</Link>
             </div>
@@ -29,18 +29,8 @@ export const Blog = () => {
             </div>
             <div className={st.main__content__body}>
                 <BlogDescription blog={blog}/>
-                <div className={st.blog__posts__container}>
-                    <BlogPost/>
-                    <BlogPost/>
-                    <BlogPost/>
-                    <BlogPost/>
-                    <BlogPost/>
-                    <BlogPost/>
-                </div>
+                <Posts/>
             </div>
-            <div className={st.main__content__footer}>
-                <a href={"#"} >Show more</a>
-            </div>
-        </>
+        </div>
     );
 };

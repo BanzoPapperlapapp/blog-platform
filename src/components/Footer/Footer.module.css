@@ -1,5 +1,7 @@
-.container {
+.content__footer {
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+.footer__container {
+    text-align: center;
 }

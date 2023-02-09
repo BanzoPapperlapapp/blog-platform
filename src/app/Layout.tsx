@@ -9,14 +9,11 @@ import {Footer} from "../components/Footer/Footer";
 
 export const Layout = () => {
     return (
-        <div className={st.app}>
+        <div className={st.wrapper}>
             <Header title={'Blogger Platform'}/>
-            <MainContainer style={st.wrapper}>
-                <SideBarL/>
                 <Main>
                     <Outlet/>
                 </Main>
-            </MainContainer>
             <Footer/>
         </div>
     );

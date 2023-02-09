@@ -1,26 +1,41 @@
 import React from 'react';
 import st from './Main.module.css'
 import {useLocation} from "react-router-dom";
+import {MainContainer} from "../Common/MainContainer";
+import {SideBarL} from "../SideBar/SideBarL";
 
 
 type MainPropsType = {
-    children: React.ReactNode
+    children?: React.ReactNode
 }
 export const Main = ({children}: MainPropsType) => {
     const test = useLocation();
     return (
         <main className={st.main}>
-            <div className={st.main__container}>
-                <div className={st.main__title}>
-                    <h3>Blogs</h3>
-                    {!!test.state &&<div className={st.main__subtitle}>{test.state?.name}</div>}
-                </div>
-                <div className={st.main__border}></div>
-                <div className={st.main__content}>
-                    {children}
-                </div>
-            </div>
+            <MainContainer style={st.main__container}>
+                <SideBarL/>
+                <section className={st.content}>
+                    <div className={st.content__container}>
+                        <div className={st.content__header}>
+                            <h3>Posts</h3>
+                        </div>
+                        <div className={st.content__settings}>
+                            <select>
+                                <option value="value2" selected>New blogs first</option>
+                                <option value="value3">Old blogs first</option>
+                                <option value="value4">A to Z</option>
+                                <option value="value5">Z to A</option>
+                            </select>
+                        </div>
+                        <div className={st.content__body}>
+                            {children}
+                        </div>
+                        <div className={st.content__footer}>
+                            <button>Show more</button>
+                        </div>
+                    </div>
+                </section>
+            </MainContainer>
         </main>
-
     );
 };

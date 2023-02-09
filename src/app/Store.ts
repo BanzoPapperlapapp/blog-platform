@@ -4,12 +4,14 @@ import {BlogsReducer} from "../store/BlogsReducer";
 import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
 import {BlogReducer} from "../store/BlogReducer";
 import {AppReducer} from "../store/AppReducer";
+import {PostsReducer} from "../store/PostsReducer";
 
 export type RootReducerType = ReturnType<typeof RootReducer>
 export const RootReducer = combineReducers({
     blogs: BlogsReducer,
     blog: BlogReducer,
-    app: AppReducer
+    app: AppReducer,
+    posts: PostsReducer
 })
 export type RootStateType = ReturnType<typeof store.getState>
 export const store = createStore(RootReducer,applyMiddleware(thunk))

@@ -6,12 +6,19 @@ type HeaderPropsTypes = {
 }
 export const Header = ({title}:HeaderPropsTypes) => {
     return (
-            <header className={st.header}>
+        <header className={st.header}>
+            <div className="header__container _container">
                 <MainContainer style={st.header__container}>
-                    <a href="src/components/Header/Header#" className={st.header__logo}>
-                        <h1>{title}</h1>
-                    </a>
+                 <h1>Blogs Platform</h1>
                 </MainContainer>
-            </header>
+            </div>
+        </header>
+            // <header className={st.header}>
+            //     <MainContainer style={st.header__container}>
+            //         <a href="src/components/Header/Header#" className={st.header__logo}>
+            //             <h1>{title}</h1>
+            //         </a>
+            //     </MainContainer>
+            // </header>
     );
 };

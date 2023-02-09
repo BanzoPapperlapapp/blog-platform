@@ -1,40 +1,97 @@
+/*.main {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    flex: 1 1 auto;*/
+/*}*/
+/*.main__container {*/
+/*    margin-left: 24px;*/
+/*    padding-bottom: 10px;*/
+/*}*/
+/*.main__title {*/
+/*    font-style: normal;*/
+/*    font-weight: 500;*/
+/*    font-size: 20px;*/
+/*    line-height: 24px;*/
+/*    padding: 29px 0 7px 0;*/
+/*    display: flex;*/
+/*    justify-content: flex-start;*/
+/*}*/
+/*.main__subtitle {*/
+/*    display: flex;*/
+/*}*/
+/*.main__subtitle::before {*/
+/*    width: 16px;*/
+/*    content: "";*/
+/*    margin-left: 5px;*/
+/*    background: url('../../img/common/UI/arrow_right.png') no-repeat 50% 60%;*/
+/*    background-size: 100%;*/
+/*}*/
+
+
+/*.main__border {*/
+/*    height: 1px;*/
+/*    left: 320px;*/
+/*    top: 120px;*/
+/*    background: #DEDBDC;*/
+/*}*/
+/*.main__content {*/
+/*    max-width: 1045px;*/
+/*    padding: 23px 0 0 0;*/
+/*}*/
+
 .main {
-    display: flex;
-    flex-direction: column;
     flex: 1 1 auto;
+    display: flex;
 }
 .main__container {
-    margin-left: 24px;
-    padding-bottom: 10px;
+    display: flex;
+    flex: 1 1 auto;
 }
-.main__title {
+.content {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.content__container {
+    flex: 1 1 auto;
+    margin: 0 0 0 24px;
+}
+
+.content__header {
+    margin: 29px 0 0 0;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #DEDBDC;
+}
+.content__header h3{
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-    line-height: 24px;
-    padding: 29px 0 7px 0;
-    display: flex;
-    justify-content: flex-start;
-}
-.main__subtitle {
-    display: flex;
-}
-.main__subtitle::before {
-    width: 16px;
-    content: "";
-    margin-left: 5px;
-    background: url('../../img/common/UI/arrow_right.png') no-repeat 50% 60%;
-    background-size: 100%;
+    line-height: 120%;
 }
 
-
-.main__border {
-    height: 1px;
-    left: 320px;
-    top: 120px;
-    background: #DEDBDC;
+.content__settings {
+    display: flex;
+    justify-content: flex-end;
+    min-height: 36px;
+    padding: 23px 0;
 }
-.main__content {
-    max-width: 1045px;
-    padding: 23px 0 0 0;
+.content__settings select{
+    border: 1px solid #DEDBDC;
+    padding: 6px 0 6px 12px;
+    min-width: 25%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    outline: none;
+}
+.content__body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 12px 0;
+
+}
+.content__footer {
+    display: flex;
+    justify-content: center;
 }

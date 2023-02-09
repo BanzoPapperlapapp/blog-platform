@@ -5,7 +5,7 @@ type ContainerTypes  = {
     style:  string
 }
 export const MainContainer = ({children, style}: ContainerTypes) => {
-    const finalClassName = style ? `${style} ${st.container}` : st.container
+    const finalClassName = style ? `${style} ${st._container}` : st._container
     return (
         <div className={finalClassName}>
             {children}
