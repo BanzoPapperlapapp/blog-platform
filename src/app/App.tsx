@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import './App.css';
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes, To} from "react-router-dom";
 import {Blogs} from "../Pages/Blogs/Blogs";
 import {Blog} from "../Pages/Blog/Blog";
 import {Layout} from "./Layout";
@@ -18,7 +18,8 @@ function App() {
     return (
         <Routes>
             <Route path={"/"} element={<Layout/>}>
-                <Route index element={<Blogs/>}/>
+                <Route index element={<Navigate to={'blogs'}/>}/>
+                <Route path={"blogs"} element={<Blogs/>}/>
                 <Route path={"blogs/:id"} element={<Blog/>}/>
                 <Route path={"posts"} element={<Posts/>}/>
             </Route>

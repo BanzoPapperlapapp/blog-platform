@@ -8,7 +8,6 @@ import {CircleLoader} from "../../components/Common/UI/Loaders/CircleLoader";
 export const Posts = () => {
     const {appStatus} = useAppSelector(state => state.app)
     const posts = useAppSelector(state => state.posts)
-    console.log(posts)
     const dispatch = useAppDispatch()
     useEffect(() => {
         dispatch(getPostsTC())

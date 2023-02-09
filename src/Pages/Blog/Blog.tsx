@@ -13,7 +13,7 @@ import {Posts} from "../Posts/Posts";
 export const Blog = () => {
     const dispatch = useAppDispatch()
     const blog = useAppSelector(state => state.blog)
-    const blogTemp:BlogsApiType = useLocation().state
+    const blogTemp:BlogsApiType = useLocation().state.state
 
     useEffect(()=> {
         dispatch(setBlogAC(blogTemp))
@@ -22,7 +22,7 @@ export const Blog = () => {
     return (
         <div className={st.blog__container}>
             <div className={st.main__content__roadmap}>
-                <Link to={-1 as To}>Back to blogs</Link>
+                <Link to={-1 as To} state={{from: 'blogs'}}>Back to blogs</Link>
             </div>
             <div className={st.main__content__head}>
                 <img src={img} alt={"Blogs image"}/>
