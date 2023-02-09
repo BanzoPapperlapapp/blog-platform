@@ -29,7 +29,7 @@ export const Blog = () => {
             </div>
             <div className={st.main__content__body}>
                 <BlogDescription blog={blog}/>
-                <Posts/>
+                <Posts id={blog.id}/>
             </div>
         </div>
     );

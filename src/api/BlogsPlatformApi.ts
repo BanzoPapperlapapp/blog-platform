@@ -13,7 +13,8 @@ const instance = axios.create({
 export const api = {
     getBlogs: () => instance.get<BlogsResponseType>('blogs'),
     getBlog: (id: string) => instance.get<BlogsApiType>(`blogs/${id}`),
-    getPosts: () => instance.get<PostsResponseType>('posts')
+    getPosts: () => instance.get<PostsResponseType>('posts'),
+    getBlogPosts: (id: string) => instance.get<PostsResponseType>(`posts/${id}`)
 }
 
 export type BlogsResponseType = {

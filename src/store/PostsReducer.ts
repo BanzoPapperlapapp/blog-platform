@@ -26,7 +26,14 @@ export const PostsReducer = (state = initialState, action: FinalPostsReducerType
 export const setPostsAC = (posts: PostApiType[]) => {
     return {type: 'SET-POSTS', payload: {posts}} as const
 }
-
+export const getBlogPostsTC = (id: string) => {
+    return async (dispatch: Dispatch) => {
+        dispatch(setAppStatusAC('loading'))
+        const posts = await api.getBlogPosts(id)
+        dispatch(setPostsAC(posts.data.items))
+        dispatch(setAppStatusAC('idle'))
+    }
+}
 export const getPostsTC = () => {
     return async (dispatch: Dispatch) => {
         dispatch(setAppStatusAC('loading'))

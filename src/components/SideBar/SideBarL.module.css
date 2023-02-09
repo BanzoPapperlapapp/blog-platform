@@ -23,7 +23,7 @@
     padding-top: 43px;
 }
 .menu__items {
-
+    min-width: 100%;
 }
 .menu__items > *:not(:first-child) {
     margin-top: 24px;
