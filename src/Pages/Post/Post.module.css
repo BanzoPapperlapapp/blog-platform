@@ -1,0 +1,75 @@
+.post__container {
+    min-width: 100%;
+}
+.post__roadmap::before {
+    width: 16px;
+    content: "";
+    float: left;
+    height: 16px;
+    margin-right: 5px;
+    background: url('../../img/common/UI/back_arrow.png') no-repeat bottom;
+    background-size: 80%;
+}
+.post__head {
+    padding: 15px 0 20px 0;
+    display: flex;
+}
+
+.blog__img {
+    padding: 15px;
+    margin: 0 12px 0 0;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.blog__img img{
+    width: 22px;
+    height: 18px;
+}
+.blog__title {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.post__body {
+
+}
+.post__title {
+    padding: 0 0 15px 0;
+}
+.post__title h3{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 110%;
+}
+.post__title span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #737067;
+}
+.post__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    min-height: 432px;
+    margin: 0 0 30px 0;
+}
+.post__img img{
+    width: 77px;
+    height: 63px;
+}
+
+.post__text {
+
+}

@@ -25,9 +25,7 @@
     border: 1px solid #1A1718;
     color: inherit;
 }
-.blog__container {
 
-}
 .blog__posts__container {
     display: flex;
     justify-content: space-between;
