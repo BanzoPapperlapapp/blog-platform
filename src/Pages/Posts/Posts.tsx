@@ -13,7 +13,6 @@ export const Posts = ({id}:PostsPropsType) => {
     const {appStatus} = useAppSelector(state => state.app)
     const posts = useAppSelector(state => state.posts)
     const dispatch = useAppDispatch()
-
     useEffect(() => {
         id
             ? dispatch(getBlogPostsTC(id))

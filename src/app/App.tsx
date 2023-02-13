@@ -1,12 +1,13 @@
 import React, {useEffect} from 'react';
 import './App.css';
-import {Navigate, Route, Routes, To} from "react-router-dom";
+import {Link, Navigate, Route, RouteObject, Routes, To, useMatches} from "react-router-dom";
 import {Blogs} from "../Pages/Blogs/Blogs";
 import {Blog} from "../Pages/Blog/Blog";
 import {Layout} from "./Layout";
 import {useAppDispatch, useAppSelector} from "./Store";
 import {getBlogTC} from "../store/BlogsReducer";
 import {Posts} from "../Pages/Posts/Posts";
+import {Post} from "../Pages/Post/Post";
 
 
 function App() {
@@ -14,7 +15,6 @@ function App() {
     useEffect(()=>{
         dispatch(getBlogTC())
     },[])
-
     return (
         <Routes>
             <Route path={"/"} element={<Layout/>}>
@@ -22,6 +22,7 @@ function App() {
                 <Route path={"blogs"} element={<Blogs/>}/>
                 <Route path={"blogs/:id"} element={<Blog/>}/>
                 <Route path={"posts"} element={<Posts/>}/>
+                <Route path={"posts/:id"} element={<Post/>}/>
             </Route>
         </Routes>
     );

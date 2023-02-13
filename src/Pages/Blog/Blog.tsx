@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import st from './Blog.module.css'
 import img from '../../img/blogs/Vector.png';
 import {BlogDescription} from "../../components/Blog/BlogDescription";
-import {Link, To, useLocation} from "react-router-dom";
+import {Link, To, useLocation, useMatch, useParams} from "react-router-dom";
 import {useAppDispatch, useAppSelector} from "../../app/Store";
 import {setBlogAC} from "../../store/BlogReducer";
 import {BlogsApiType} from "../../api/BlogsPlatformApi";

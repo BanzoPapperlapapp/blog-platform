@@ -1,7 +1,7 @@
 import React from 'react';
 import st from './Main.module.css'
 
-import { useSearchParams } from "react-router-dom";
+import {RouteObject, useMatches, useSearchParams} from "react-router-dom";
 import {useLocation, useParams} from "react-router-dom";
 import {MainContainer} from "../Common/MainContainer";
 import {SideBarL} from "../SideBar/SideBarL";
@@ -13,6 +13,7 @@ type MainPropsType = {
     children?: React.ReactNode
 }
 export const Main = ({children}: MainPropsType) => {
+
     return (
         <main className={st.main}>
             <MainContainer style={st.main__container}>
@@ -25,7 +26,7 @@ export const Main = ({children}: MainPropsType) => {
                         </div>
                         <div className={st.content__settings}>
                             <select>
-                                <option value="value2" selected>New blogs first</option>
+                                <option value="value2" >New blogs first</option>
                                 <option value="value3">Old blogs first</option>
                                 <option value="value4">A to Z</option>
                                 <option value="value5">Z to A</option>
