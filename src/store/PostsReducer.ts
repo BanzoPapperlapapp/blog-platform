@@ -4,8 +4,8 @@ import {setAppStatusAC} from "./AppReducer";
 
 const initialState:PostApiType[] = [
     {
-        id: '1',
-        blogId: '2',
+        id: '',
+        blogId: '',
         blogName: '',
         content: '',
         createdAt: '',

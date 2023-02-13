@@ -61,6 +61,8 @@
     margin: 29px 0 0 0;
     padding-bottom: 7px;
     border-bottom: 1px solid #DEDBDC;
+    display: flex;
+    align-items: baseline;
 }
 .content__header h3{
     font-style: normal;
@@ -68,6 +70,7 @@
     font-size: 20px;
     line-height: 120%;
 }
+
 
 .content__settings {
     display: flex;

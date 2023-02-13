@@ -1,15 +1,18 @@
 import React from 'react';
 import st from './Main.module.css'
-import {useLocation} from "react-router-dom";
+
+import { useSearchParams } from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 import {MainContainer} from "../Common/MainContainer";
 import {SideBarL} from "../SideBar/SideBarL";
+import {useAppSelector} from "../../app/Store";
+import {NavigationRoad} from "./NavigationRoad";
 
 
 type MainPropsType = {
     children?: React.ReactNode
 }
 export const Main = ({children}: MainPropsType) => {
-    const test = useLocation();
     return (
         <main className={st.main}>
             <MainContainer style={st.main__container}>
@@ -17,7 +20,8 @@ export const Main = ({children}: MainPropsType) => {
                 <section className={st.content}>
                     <div className={st.content__container}>
                         <div className={st.content__header}>
-                            <h3>Posts</h3>
+                            <NavigationRoad />
+                            {/*{description && */}
                         </div>
                         <div className={st.content__settings}>
                             <select>

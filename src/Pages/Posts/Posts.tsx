@@ -19,7 +19,7 @@ export const Posts = ({id}:PostsPropsType) => {
             ? dispatch(getBlogPostsTC(id))
             : dispatch(getPostsTC())
     }, [])
-    console.log(posts)
+
     return (
         <div className={st.posts_container}>
             {
