@@ -35,9 +35,9 @@ export const Main = ({children}: MainPropsType) => {
                         <div className={st.content__body}>
                             {children}
                         </div>
-                        <div className={st.content__footer}>
-                            <button>Show more</button>
-                        </div>
+                        {/*<div className={st.content__footer}>*/}
+                        {/*    <button>Show more</button>*/}
+                        {/*</div>*/}
                     </div>
                 </section>
             </MainContainer>

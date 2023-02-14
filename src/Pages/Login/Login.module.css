@@ -1,0 +1,26 @@
+.login__container {
+    margin: 0 auto;
+}
+.login__form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.login__form h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+}
+.login__form button {
+    min-height: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.login__form input {
+    min-height: 30px;
+    padding: 5px 0 5px 5px;
+}
+.login__form > *:not(:last-child) {
+    margin: 0 0 20px 0;
+}
