@@ -74,7 +74,8 @@
 
 .content__settings {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     min-height: 36px;
     padding: 23px 0;
 }

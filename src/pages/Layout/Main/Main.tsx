@@ -4,6 +4,7 @@ import {MainContainer} from "../../../schared/containers/1152pxContainer";
 import {SideBarL} from "../SideBar/SideBarL";
 import {BreadCrumbs} from "../../../widgets/BreadCrumbs/BreadCrumbs";
 import {MySelect} from "../../../schared/select/MySelect";
+import {MySearch} from "../../../schared/search/MySearch";
 
 
 type MainPropsType = {
@@ -21,12 +22,7 @@ export const Main = ({children}: MainPropsType) => {
                             <BreadCrumbs />
                         </div>
                         <div className={st.content__settings}>
-                            {/*<select>*/}
-                            {/*    <option value="value2" >New blogs first</option>*/}
-                            {/*    <option value="value3">Old blogs first</option>*/}
-                            {/*    <option value="value4">A to Z</option>*/}
-                            {/*    <option value="value5">Z to A</option>*/}
-                            {/*</select>*/}
+                            <MySearch/>
                             <MySelect
                                 options={[
                                     {value: 'FIFO', label: 'New blogs first'},
