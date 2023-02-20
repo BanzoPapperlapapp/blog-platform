@@ -1,0 +1,32 @@
+.mySelect-container {
+    padding: 6px 0 6px 12px;
+    min-width: 25%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+
+
+}
+.mySelect__control {
+    border: 1px solid #DEDBDC !important;
+    background: #FAF7F8 !important;
+}
+.mySelect__control--is-focused {
+    box-shadow: none !important;
+}
+.mySelect__menu {
+    min-width: inherit;
+}
+
+
+.mySelect__control--menu-is-open .mySelect__indicator{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.mySelect__indicator {
+    cursor: pointer;
+}

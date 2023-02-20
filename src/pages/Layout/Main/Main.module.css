@@ -78,16 +78,6 @@
     min-height: 36px;
     padding: 23px 0;
 }
-.content__settings select{
-    border: 1px solid #DEDBDC;
-    padding: 6px 0 6px 12px;
-    min-width: 25%;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 171%;
-    outline: none;
-}
 .content__body {
     display: flex;
     flex-wrap: wrap;

@@ -9,6 +9,14 @@ import {Blog} from "./Blog/Blog";
 import {Posts} from "./Posts/Posts";
 import {Post} from "./Post/Post";
 
+export const PATH = {
+    BLOGS: 'blogs',
+    BLOG: 'blogs/:id',
+    POSTS: 'posts',
+    POST: 'posts/:id',
+    LOGIN: 'login',
+}
+
 export const Pages = () => {
     const dispatch = useAppDispatch()
     useEffect(() => {
@@ -17,12 +25,12 @@ export const Pages = () => {
     return (
         <Routes>
             <Route path={"/"} element={<Layout/>}>
-                <Route index element={<Navigate to={'blogs'}/>}/>
-                <Route path={"login"} element={<Login/>}/>
-                <Route path={"blogs"} element={<Blogs/>}/>
-                <Route path={"blogs/:id"} element={<Blog/>}/>
-                <Route path={"posts"} element={<Posts/>}/>
-                <Route path={"posts/:id"} element={<Post/>}/>
+                <Route index element={<Navigate to={PATH.BLOGS}/>}/>
+                <Route path={PATH.LOGIN} element={<Login/>}/>
+                <Route path={PATH.BLOGS} element={<Blogs/>}/>
+                <Route path={PATH.BLOG} element={<Blog/>}/>
+                <Route path={PATH.POSTS} element={<Posts/>}/>
+                <Route path={PATH.POST} element={<Post/>}/>
             </Route>
         </Routes>
     );
