@@ -1,3 +1,4 @@
-.filtersContainer {
-
+.filtersWrapper {
+    display: flex;
+    justify-content: space-between;
 }

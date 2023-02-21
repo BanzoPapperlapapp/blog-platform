@@ -73,11 +73,31 @@
 
 
 .content__settings {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     min-height: 36px;
     padding: 23px 0;
+}
+.admin__settings {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.admin__settings button{
+    min-height: 36px;
+    min-width: 118px;
+    background: #F8346B;
+    box-shadow: 0px 4px 18px rgba(248, 52, 107, 0.35), inset 0px 1px 0px rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 142%;
+    /* identical to box height, or 143% */
+
+    text-align: center;
+
+    cursor: pointer;
 }
 .content__body {
     display: flex;
