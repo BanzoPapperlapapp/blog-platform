@@ -4,7 +4,8 @@ import {MainContainer} from "../../../schared/containers/1152pxContainer";
 import {SideBarL} from "../SideBar/SideBarL";
 import {BreadCrumbs} from "../../../widgets/BreadCrumbs/BreadCrumbs";
 import {MySelect} from "../../../schared/select/MySelect";
-import {MySearch} from "../../../schared/search/MySearch";
+import {MyInput} from "../../../schared/input/MyInput";
+import {FiltersForBlogsAndPosts} from "../../../widgets/FiltersForBlogsAndPosts/FiltersForBlogsAndPosts";
 
 
 type MainPropsType = {
@@ -22,16 +23,7 @@ export const Main = ({children}: MainPropsType) => {
                             <BreadCrumbs />
                         </div>
                         <div className={st.content__settings}>
-                            <MySearch/>
-                            <MySelect
-                                options={[
-                                    {value: 'FIFO', label: 'New blogs first'},
-                                    {value: 'LIFO', label: 'Old blogs first'},
-                                    {value: 'AZ', label: 'A to Z'},
-                                    {value: 'ZA', label: 'Z to A'},
-                                ]}
-                                setSelected={()=>console.log}
-                                />
+                            <FiltersForBlogsAndPosts/>
                         </div>
                         <div className={st.content__body}>
                             {children}

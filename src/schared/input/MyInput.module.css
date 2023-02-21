@@ -23,3 +23,22 @@
     cursor: pointer;
     margin-right: 15px;
 }
+
+.mySearchWrapper span{
+    display: inline-block;
+    height: 12px;
+}
+
+.superInput {
+}
+
+.errorInput {
+    border: 1px solid #cc0000;
+}
+
+.errorInput:focus {
+
+}
+
+.error {
+}
